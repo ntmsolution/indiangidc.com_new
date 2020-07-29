@@ -88,4 +88,6 @@
 	define('TERM_TITLE',"Terms of Service");
 	
 	define('PRICE_TITLE',"Membership Price");
+	
+	define('UPGRADE_INDEX_TITLE',"Upgrade Membership");
 ?>

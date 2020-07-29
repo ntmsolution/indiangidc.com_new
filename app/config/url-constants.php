@@ -77,4 +77,6 @@
 	define('TERM','terms-of-services');
 	
 	define('PRICE',"membership-price");
+	
+	define('UPGRADE',"membership");
 ?>

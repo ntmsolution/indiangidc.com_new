@@ -94,7 +94,33 @@
 						  </li>
 						</ul>
 					</li>
-				  
+					
+					
+					<li class="nav-item has-treeview">
+						<a href="#" class="nav-link <?php if($class == "Category"){ echo "active"; } ?>">
+					
+						  <i class=" nav-icon fa fa-list-alt" aria-hidden="true"></i>
+						  <p>
+							Manage Membership Plan
+							<i class="fas fa-angle-left right"></i>
+						  </p>
+						</a>
+						<ul class="nav nav-treeview">
+						  <li class="nav-item">
+							<a href="<?php echo base_url(ADMINFOLDER."Plan/add/"); ?>" class="nav-link <?php if($class == "Plan" && $method == "add"){ echo "active"; } ?>">
+							  <i class="fa fa-plus nav-icon"></i>
+							  <p>Add Plan</p>
+							</a>
+						  </li>
+						  <li class="nav-item">
+							<a href="<?php echo base_url(ADMINFOLDER."Plan/view/"); ?>" class="nav-link <?php if($class == "Plan" && $method == "view"){ echo "active"; } ?>">
+							  <i class="fa fa-eye nav-icon"></i>
+							  <p>View Plan</p>
+							</a>
+						  </li>
+						</ul>
+					</li>
+					
 					<li class="nav-item">
 						<a href="<?php echo base_url(ADMINFOLDER."Settings/edit"); ?>" class="nav-link <?php if($class == "Settings" && $method == "edit"){ echo "active"; } ?>" >
 						  <i class="fa fa-cog nav-icon"></i>

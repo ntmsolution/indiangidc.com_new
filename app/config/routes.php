@@ -139,4 +139,7 @@ $route[TERM]															= 'Static_pages/term';
 
 $route[PRICE]															= 'Static_pages/price';
 
+$route[UPGRADE]															= 'Upgrade/index';
+
+
 /* -------------------------------- ADMIN ROUTES -------------------------------------------- */

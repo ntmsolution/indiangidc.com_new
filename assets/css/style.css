@@ -1,7 +1,6 @@
 body{
 	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-	
+	font-weight: 400;	
 }
 img{
 	max-width: 100%;
@@ -503,3 +502,57 @@ tr.lead_buy_data:hover
 	.searcharea .btnsearch{width:100%;margin-top:10px;}
 	.searcharea{padding:35px 0px;}
 }
+
+.membership-box
+{
+	border:1px solid #B61C1C;
+	border-radius:5px 5px 0px 0px;
+	
+}
+
+.membership-box .title h1
+{
+	
+	color:#fff;
+}
+
+.membership-box .details .fa-check
+{
+	color:#90EE90;
+}
+.membership-box .details .fa-close
+{
+	color: #FE2401;
+	margin-right:4px;
+}
+.membership-box .details
+{
+	margin:20px;
+}
+.membership-box .details p
+{
+	line-height:24px;
+}
+.membership-box .title
+{
+	background-color:#B61C1C;
+	padding:10px 0px;
+	text-align:center;
+}
+.btn-buy-now
+{
+	width: 100%;
+    background: #B61C1C;
+    border: 1px solid #B61C1C;
+    border-radius: 0px 0px 5px 5px;
+    padding: 10px 0px;
+	color:#fff;
+}
+
+.btn-buy-now:hover
+{
+	
+    background: #c94040;
+    border: 1px solid #c94040;
+}
+

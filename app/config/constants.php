@@ -102,3 +102,21 @@ include_once "admin-msg-constants.php";
 include_once "url-constants.php";
 include_once "otp-or-msg-constants.php";
 
+/* seller plan  Constant Start  */
+	
+	define("TITLE_ADD_SELLER_PLAN","Add Seller plan");
+	define("HEADING_ADD_SELLER_PLAN","Add Seller plan");
+	define("MSG_ADD_SELLER_PLAN_S1","Add seller plan successfully.");
+	define("MSG_ADD_SELLER_PLAN_E1","Add seller plan not successfully.");	
+	
+	define("TITLE_EDIT_SELLER_PLAN","Update Seller plan");
+	define("HEADING_EDIT_SELLER_PLAN","Update Seller plan");
+	define("MSG_EDIT_SELLER_PLAN_S1","Update seller plan successfully.");
+	define("MSG_EDIT_SELLER_PLAN_E1","Update seller plan not successfully.");
+	
+	define("TITLE_VIEW_SELLER_PLAN","View Seller plan");
+	define("HEADING_VIEW_SELLER_PLAN","View Seller plan");
+	define("MSG_VIEW_SELLER_PLAN_S1","Delete seller plan successfully.");
+	define("MSG_VIEW_SELLER_PLAN_E1","Delete seller plan not successfully.");
+	
+/* seller plan  Constant End */

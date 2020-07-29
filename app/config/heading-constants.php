@@ -85,4 +85,6 @@
 	define('TERM_HEADING',"Terms of Service");
 	
 	define('PRICE_HEADING',"Membership Price");
+	
+	define('UPGRADE_INDEX_HEADING',"Upgrade Membership");
 ?>

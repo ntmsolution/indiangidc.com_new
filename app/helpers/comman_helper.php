@@ -884,6 +884,13 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				}
 				else if($sr['current_step'] == 5)
 				{
+					if(getClass() != "Upgrade")
+					{						
+						redirect(UPGRADE);
+					}
+				}
+				else if($sr['current_step'] == 6)
+				{
 					if(getClass() != "Seller")
 					{						
 						redirect(SELLER_COMPANYPROFILE);
