@@ -1,0 +1,10 @@
+body{font-family: 'Roboto', sans-serif;font-size: 12px;}
+.brand-link .brand-text span{font-weight: 500!important;}
+.brand-link .brand-text{font-size: 14px;}
+/* Table Arrangement */
+table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before,table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after{display:none;}
+.table{font-size:14px;}
+.table tr th{font-weight: 500;}
+.table tr th,.table tr td{padding: 5px 5px;}
+.table-bordered,.table-bordered th, .table-bordered td,.table thead th{border-color: #ccc;}
+table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting, table.dataTable thead > tr > td.sorting_asc, table.dataTable thead > tr > td.sorting_desc, table.dataTable thead > tr > td.sorting{padding-right:0px;}

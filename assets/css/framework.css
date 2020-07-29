@@ -1,0 +1,23 @@
+.mt5{
+	margin-top:5px;
+}
+.mt25{
+	margin-top:25px;
+}
+.noborder{
+	border-top-width:0px!important;
+}
+.bordergrey{
+	border:1px solid #ccc;
+}
+.btn-normal{
+	background:#e3e3e3;
+	border-radius:0px;
+	font-weight:900;
+	font-size:12px;
+	transition:all .4s;
+}
+.btn-normal:hover{
+	background:#B71C1C;
+	color:#fff;
+}
