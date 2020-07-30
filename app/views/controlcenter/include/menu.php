@@ -106,12 +106,12 @@
 						  </p>
 						</a>
 						<ul class="nav nav-treeview">
-						  <li class="nav-item">
+						 <?php /* <li class="nav-item">
 							<a href="<?php echo base_url(ADMINFOLDER."Plan/add/"); ?>" class="nav-link <?php if($class == "Plan" && $method == "add"){ echo "active"; } ?>">
 							  <i class="fa fa-plus nav-icon"></i>
 							  <p>Add Plan</p>
 							</a>
-						  </li>
+						  </li>*/?>
 						  <li class="nav-item">
 							<a href="<?php echo base_url(ADMINFOLDER."Plan/view/"); ?>" class="nav-link <?php if($class == "Plan" && $method == "view"){ echo "active"; } ?>">
 							  <i class="fa fa-eye nav-icon"></i>
