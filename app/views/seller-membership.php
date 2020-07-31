@@ -1,6 +1,8 @@
 <?php
 	defined('BASEPATH') OR exit('No direct script access allowed');
+	
 	lvi("header");
+	
 ?>
 <div class="content bg-white">
 	<div class="container">
@@ -63,10 +65,12 @@
 										<p><i class="fa <?php echo $symbol4; ?>"></i> <?php echo $line4; ?></p>
 										<p><i class="fa <?php echo $symbol5; ?>"></i> <?php echo $line5; ?></p>
 										<p><i class="fa <?php echo $symbol6; ?>"></i> <?php echo $line6; ?></p>
-										
 									</div>
 								</div>
-								<button class="btn-buy-now"  >Buy Now</button>
+								<form method="post" action="<?php echo base_url(UPGRADE_PAYNOW); ?>">	
+									<input type="hidden" name="plan_id" value="<?php echo $id; ?>" />
+									<button class="btn-buy-now" >Buy Now</button>
+								</form>
 							</div>
 					<?php
 						}
@@ -77,37 +81,8 @@
 		</div>
 	</div>		
 </div>
-<button id="paynow">Buy Noew</button>
-<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-<script>
-var options = {
-    "key": "rzp_live_2vAkWUTruoRYqC", // Enter the Key ID generated from the Dashboard
-    "amount": "50000", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
-    "currency": "INR",
-    "name": "Acme Corp",
-    "description": "Test Transaction",
-    "image": "https://www.careerinfoway.com/assets/img/logo.png",
-    "order_id": "t", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
-    "callback_url": "http://192.168.1.5/development/ajay/indiangidc.com/membership",
-    "prefill": {
-        "name": "Gaurav Kumar",
-        "email": "gaurav.kumar@example.com",
-        "contact": "9999999999"
-    },
-    "notes": {
-        "address": "Razorpay Corporate Office"
-    },
-    "theme": {
-        "color": "#F37254"
-    }
-};
-var rzp1 = new Razorpay(options);
-document.getElementById('paynow').onclick = function(e){
 	
-    rzp1.open();
-	e.preventDefault();
-}
-</script>
-<?php 
+<?php	
+	
 	lvi("footer");
 ?>

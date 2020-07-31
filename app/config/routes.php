@@ -141,5 +141,9 @@ $route[PRICE]															= 'Static_pages/price';
 
 $route[UPGRADE]															= 'Upgrade/index';
 
+$route[UPGRADE_PAYNOW]													= 'Upgrade/paynow';
+
+$route[UPGRADE_PAYMENT_VERIFY]											= 'Upgrade/verifyPayment';
+
 
 /* -------------------------------- ADMIN ROUTES -------------------------------------------- */

@@ -79,4 +79,9 @@
 	define('PRICE',"membership-price");
 	
 	define('UPGRADE',"membership");
+	
+	define('UPGRADE_PAYNOW',"membership-payment");
+	
+	define('UPGRADE_PAYMENT_VERIFY',"payment-verify");
+	
 ?>
