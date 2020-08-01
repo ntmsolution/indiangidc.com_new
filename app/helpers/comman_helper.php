@@ -884,18 +884,33 @@ if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 				}
 				else if($sr['current_step'] == 5)
 				{
-					if(getClass() != "Upgrade")
-					{						
-						redirect(UPGRADE);
+					$seller_id = getLoginId();
+					
+					$sm = select("seller_membership","seller_id = '$seller_id' order by id DESC");
+					if(count($sm) == 0)
+					{
+						if(getClass() != "Upgrade")
+						{						
+							redirect(UPGRADE);
+						}					
+					}
+					else if(strtotime($sm[0]['expire_date']) < (time()+86400))
+					{
+						if(getClass() != "Upgrade")
+						{		
+							setMsg("your membership is expire upgrade your membership",1);
+							redirect(UPGRADE);
+						}
+					}
+					else
+					{
+						if(getClass() != "Seller")
+						{						
+							redirect(SELLER_COMPANYPROFILE);
+						}
 					}
 				}
-				else if($sr['current_step'] == 6)
-				{
-					if(getClass() != "Seller")
-					{						
-						redirect(SELLER_COMPANYPROFILE);
-					}
-				}
+				
 			}
 			else
 			{

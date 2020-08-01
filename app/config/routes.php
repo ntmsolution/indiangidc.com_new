@@ -145,5 +145,6 @@ $route[UPGRADE_PAYNOW]													= 'Upgrade/paynow';
 
 $route[UPGRADE_PAYMENT_VERIFY]											= 'Upgrade/verifyPayment';
 
+$route[SELLER_ORDER]													= 'Seller/order';
 
 /* -------------------------------- ADMIN ROUTES -------------------------------------------- */

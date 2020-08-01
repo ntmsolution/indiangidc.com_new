@@ -59,12 +59,12 @@
 									<div class="details">
 										<h2 style="text-align:center;">Rs. <?php echo $plan_price; ?>/- </h2>
 										<h3 style="text-align:center;font-size:18px;"><strike><?php echo $real_duration; ?></strike> | <?php echo $plan_duration; ?> Month</h3>
-										<p><i class="fa <?php echo $symbol1; ?>"></i> <?php echo $line1; ?></p>
+										<?php /*<p><i class="fa <?php echo $symbol1; ?>"></i> <?php echo $line1; ?></p>
 										<p><i class="fa <?php echo $symbol2; ?>"></i> <?php echo $line2; ?></p>
 										<p><i class="fa <?php echo $symbol3; ?>"></i> <?php echo $line3; ?></p>
 										<p><i class="fa <?php echo $symbol4; ?>"></i> <?php echo $line4; ?></p>
 										<p><i class="fa <?php echo $symbol5; ?>"></i> <?php echo $line5; ?></p>
-										<p><i class="fa <?php echo $symbol6; ?>"></i> <?php echo $line6; ?></p>
+										<p><i class="fa <?php echo $symbol6; ?>"></i> <?php echo $line6; ?></p>*/?>
 									</div>
 								</div>
 								<form method="post" action="<?php echo base_url(UPGRADE_PAYNOW); ?>">	

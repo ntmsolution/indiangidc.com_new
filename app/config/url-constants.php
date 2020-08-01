@@ -84,4 +84,5 @@
 	
 	define('UPGRADE_PAYMENT_VERIFY',"payment-verify");
 	
+	define("SELLER_ORDER",'payment-details')
 ?>

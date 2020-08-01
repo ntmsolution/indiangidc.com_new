@@ -25,6 +25,15 @@ class Seller extends CI_Controller
 		lv('seller-dashboard',$data);
 	}
 	
+	public function order($pno=0)
+	{
+		//SELLER_ORDER
+		$data['pno']			= $pno;
+		$data['page_title'] 	= SELLER_ORDER_TITLE;
+		$data['page_heading'] 	= SELLER_ORDER_HEADING;
+		lv('seller-view-order.php',$data);
+	}
+	
 	
 	public function companyProfile()
 	{		
@@ -41,7 +50,7 @@ class Seller extends CI_Controller
 		$data['ss']					= isset($seller_statutory[0]) ? $seller_statutory[0] : array("gst_no"=>"","gst_no_reson"=>"","pan_no"=>"","tan_no"=>"","cin_no"=>"","ie_code"=>"");
 		
 		$seller_bank_info			= getSellerBankInfo("seller_id = '".$data['user_id']."'");
-		$data['sbi']				= isset($seller_bank_info[0]) ? $seller_bank_info[0] : array("ifsc_code"=>"","bank_name"=>"","account_no"=>"","account_type"=>"");
+		$data['sbi']				= isset($seller_bank_info[0]) ? $seller_bank_info[0] : array("ifsc_code"=>"","bank_name"=>"","account_no"=>"","account_type"=>"","account_name"=>"","swift_code"=>"");
 		
 		
 		$sbp						= getSellerBusinessProfile("seller_id = '".$data['user_id']."'");

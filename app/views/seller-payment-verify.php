@@ -1,18 +1,9 @@
 <?php
-
-$keyId = 'rzp_test_K7cDzVyqxJ1PLM';
-$keySecret = 'G00ztNEWAoC7CAsH23wJYqIb';
-$displayCurrency = 'INR';
-
-//These should be commented out in production
-// This is for error reporting
-// Add it to config.php to report any errors
+if(session_id() == '') {
+    session_start();
+}
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
-
-
-session_start();
-
 require('razorpay-php/Razorpay.php');
 
 use Razorpay\Api\Api;
@@ -22,7 +13,7 @@ $success = true;
 
 $error = "Payment Failed";
 
-if (empty($_POST['razorpay_payment_id']) === false)
+if (empty($razorpay_payment_id) === false)
 {
     $api = new Api($keyId, $keySecret);
 
@@ -32,9 +23,9 @@ if (empty($_POST['razorpay_payment_id']) === false)
         // come from a trusted source (session here, but
         // could be database or something else)
         $attributes = array(
-            'razorpay_order_id' => $_SESSION['razorpay_order_id'],
-            'razorpay_payment_id' => $_POST['razorpay_payment_id'],
-            'razorpay_signature' => $_POST['razorpay_signature']
+            'razorpay_order_id' => $_SESSION['razorpay']['razorpay_order_id'],
+            'razorpay_payment_id' => $razorpay_payment_id,
+            'razorpay_signature' => $razorpay_signature
         );
 
         $api->utility->verifyPaymentSignature($attributes);
@@ -49,13 +40,29 @@ if (empty($_POST['razorpay_payment_id']) === false)
 
 if ($success === true)
 {
-    $html = "<p>Your payment was successful</p>
-             <p>Payment ID: {$_POST['razorpay_payment_id']}</p>";
+	date_default_timezone_set("Asia/Kolkata");
+	$seller_id								= getLoginId();
+	$sm['razorpay_order_id'] 				= $_SESSION['razorpay']['razorpay_order_id'];
+	$sm['plan_id']							= $_SESSION['razorpay']['plan_id'];
+	$sp										= selectById("seller_plan",$sm['plan_id']);
+	$sm['plan_name']						= $sp['plan_name'];
+	$sm['plan_price']						= $sp['plan_price'];
+	$sm['plan_duration']					= $sp['plan_duration'];
+	$plan_duration							= $sp['plan_duration'];	
+	$sm['razorpay_payment_id']				= $razorpay_payment_id;
+	$sm['razorpay_signature']				= $razorpay_signature;
+	$sm['order_date']						= date("Y-m-d");
+	$sm['expire_date']						= date("Y-m-d",strtotime("+$plan_duration months"));	
+	$sm['seller_id']						= $seller_id;
+	
+	unset($_SESSION['razorpay']);	
+	insert("seller_membership",$sm);	
+	setMsg('Your payment was successful');
+	redirect(SELLER_ORDER);
 }
 else
 {
-    $html = "<p>Your payment failed</p>
-             <p>{$error}</p>";
+	unset($_SESSION['razorpay']);
+    setMsg('Your Payment is fail',1);
+	redirect(UPGRADE);
 }
-
-echo $html;

@@ -42,6 +42,10 @@
 					<i class="menuicon fa fa-gear"></i> 
 					<a href="<?php echo base_url(SELLER_SETTINGS); ?>">Settings</a>
 				</li>
+				<li <?php if(getMethod() == "order"){ echo "class='active'"; } ?>>
+					<i class="menuicon fa fa-money"></i> 
+					<a href="<?php echo base_url(SELLER_ORDER); ?>">Payment Details</a>
+				</li>
 				<?php /*
 				<li <?php //if(getMethod() == "dashboard"){ echo "class='active'"; } ?> >
 					<i class="menuicon fa fa-dashboard"></i> 

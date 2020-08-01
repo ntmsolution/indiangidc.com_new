@@ -87,4 +87,6 @@
 	define('PRICE_HEADING',"Membership Price");
 	
 	define('UPGRADE_INDEX_HEADING',"Upgrade Membership");
+	
+	define('SELLER_ORDER_HEADING',"Payment Details");
 ?>

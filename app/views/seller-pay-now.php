@@ -34,7 +34,7 @@
 	error_reporting(E_ALL);
 	ini_set('display_errors', 1);
 
-require('razorpay-php/Razorpay.php');
+require 'razorpay-php/Razorpay.php';
 
 if(session_id() == '') {
     session_start();
@@ -48,7 +48,7 @@ $api = new Api($keyId, $keySecret);
 
 $orderData = [
     'receipt'         => 3456,
-    'amount'          => $plan_price  * 100, // 2000 rupees in paise
+    'amount'          => $plan_price  * 100, // rupees in paise
     'currency'        => $displayCurrency,
     'payment_capture' => 1 // auto capture
 ];
@@ -57,7 +57,8 @@ $razorpayOrder = $api->order->create($orderData);
 
 $razorpayOrderId = $razorpayOrder['id'];
 
-$_SESSION['razorpay_order_id'] = $razorpayOrderId;
+$_SESSION['razorpay']['razorpay_order_id'] 	= $razorpayOrderId;
+$_SESSION['razorpay']['plan_id']			= $plan_id;
 
 $displayAmount = $amount = $orderData['amount'];
 

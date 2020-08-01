@@ -90,4 +90,6 @@
 	define('PRICE_TITLE',"Membership Price");
 	
 	define('UPGRADE_INDEX_TITLE',"Upgrade Membership");
+	
+	define('SELLER_ORDER_TITLE',"Payment Details");
 ?>
